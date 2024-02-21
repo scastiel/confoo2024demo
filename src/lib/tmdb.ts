@@ -24,7 +24,7 @@ export async function fetchMovie(movieId: string): Promise<Movie | null> {
 }
 
 export async function searchMovies(query: string): Promise<Movie[]> {
-  // await delay(Math.random() * 5000)
+  // await delay(3000)
   const apiKey = process.env.TMDB_API_KEY
   const url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(
     query

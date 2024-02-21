@@ -1,4 +1,3 @@
-import { FavoriteButton } from '@/components/favorite-button'
 import { fetchMovie } from '@/lib/tmdb'
 import { notFound } from 'next/navigation'
 

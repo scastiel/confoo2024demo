@@ -1,7 +1,7 @@
-import { SearchForm } from '@/app/search-movies-2/[[...query]]/search-form'
 import { searchMovies } from '@/lib/tmdb'
 import Link from 'next/link'
 import { Suspense } from 'react'
+import { SearchForm } from './search-form'
 
 export default function SearchMoviePage({
   params: { query },
@@ -16,7 +16,9 @@ export default function SearchMoviePage({
 
       <SearchForm query={query_} />
 
-      <MovieResults query={query_} />
+      <Suspense fallback={<p>Loading…</p>}>
+        <MovieResults query={query_} />
+      </Suspense>
     </>
   )
 }
